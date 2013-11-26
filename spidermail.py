@@ -43,14 +43,14 @@ def get_urls(url, depth):
         print "** Failed getting links from", url
         return
     links = url_pattern.findall(r.content)
-    print "%d links from %s" % (len(links), url)
+    print "%d links in %s" % (len(links), url)
     urls = {}
-    for link in links:
+    for link in links:        
         if link.startswith('/'):
-            link = base_url + link
-        elif not link.startswith(base_url):
-            continue
-        urls[link] = depth + 1
+            link = base_url + link        
+        if link.startswith(url):
+            urls[link] = depth + 1
+    print "%d urls from %s" % (len(urls), url)
     return urls
 
 
