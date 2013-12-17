@@ -3,6 +3,8 @@ import re
 import os
 import os.path
 
+# TODO use CommonRegex: https://github.com/madisonmay/CommonRegex
+
 # this is from https://gist.github.com/dideler/5219706
 email_pattern = re.compile(("([a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`"
                     "{|}~-]+)*(@|\sat\s)(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(\.|"
